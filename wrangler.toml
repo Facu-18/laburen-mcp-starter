@@ -1,0 +1,18 @@
+name = "laburen-mcp-worker"
+main = "src/index.ts"
+compatibility_date = "2025-01-29"
+
+# Create a D1 database and bind it as DB
+# Example:
+# wrangler d1 create laburen_products_db
+# Then paste the database_name and database_id below.
+[[d1_databases]]
+binding = "DB"
+database_name = "REPLACE_ME_DB_NAME"
+database_id = "REPLACE_ME_DB_ID"
+
+[vars]
+# Chatwoot settings (do NOT commit real secrets)
+CHATWOOT_BASE_URL = "https://chatwootchallenge.laburen.com"
+CHATWOOT_ACCOUNT_ID = "REPLACE_ME_ACCOUNT_ID"
+CHATWOOT_API_TOKEN = "REPLACE_ME_API_TOKEN"
